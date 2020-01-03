@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA6C44D223BF32B9009BFAFA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C44D123BF32B9009BFAFA /* Player.swift */; };
 		FAA825E723BE321E00FF65E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA825E623BE321E00FF65E0 /* AppDelegate.swift */; };
 		FAA825E923BE321E00FF65E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA825E823BE321E00FF65E0 /* SceneDelegate.swift */; };
 		FAA825EB23BE321E00FF65E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA825EA23BE321E00FF65E0 /* ViewController.swift */; };
 		FAA825EE23BE321E00FF65E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA825EC23BE321E00FF65E0 /* Main.storyboard */; };
 		FAA825F023BE321F00FF65E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA825EF23BE321F00FF65E0 /* Assets.xcassets */; };
 		FAA825F323BE321F00FF65E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA825F123BE321F00FF65E0 /* LaunchScreen.storyboard */; };
+		FAA825FB23BE3ED900FF65E0 /* BrodaleeRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA825FA23BE3ED900FF65E0 /* BrodaleeRadioButton.swift */; };
+		FAA825FD23BE44F700FF65E0 /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA825FC23BE44F700FF65E0 /* Game.storyboard */; };
+		FAA825FF23BE45A000FF65E0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA825FE23BE45A000FF65E0 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA6C44D123BF32B9009BFAFA /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FAA825E323BE321E00FF65E0 /* DiceRoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA825E623BE321E00FF65E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA825E823BE321E00FF65E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		FAA825EF23BE321F00FF65E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA825F223BE321F00FF65E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA825F423BE321F00FF65E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA825FA23BE3ED900FF65E0 /* BrodaleeRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrodaleeRadioButton.swift; sourceTree = "<group>"; };
+		FAA825FC23BE44F700FF65E0 /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		FAA825FE23BE45A000FF65E0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA6C44CE23BF3258009BFAFA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAA825FE23BE45A000FF65E0 /* GameViewController.swift */,
+				FAA825EA23BE321E00FF65E0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA6C44CF23BF3268009BFAFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA825F123BE321F00FF65E0 /* LaunchScreen.storyboard */,
+				FAA825EC23BE321E00FF65E0 /* Main.storyboard */,
+				FAA825FC23BE44F700FF65E0 /* Game.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA6C44D023BF32AB009BFAFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C44D123BF32B9009BFAFA /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FAA825DA23BE321E00FF65E0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +91,14 @@
 		FAA825E523BE321E00FF65E0 /* DiceRoll */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C44D023BF32AB009BFAFA /* Model */,
+				FA6C44CF23BF3268009BFAFA /* View */,
+				FA6C44CE23BF3258009BFAFA /* Controller */,
 				FAA825E623BE321E00FF65E0 /* AppDelegate.swift */,
 				FAA825E823BE321E00FF65E0 /* SceneDelegate.swift */,
-				FAA825EA23BE321E00FF65E0 /* ViewController.swift */,
-				FAA825EC23BE321E00FF65E0 /* Main.storyboard */,
 				FAA825EF23BE321F00FF65E0 /* Assets.xcassets */,
-				FAA825F123BE321F00FF65E0 /* LaunchScreen.storyboard */,
 				FAA825F423BE321F00FF65E0 /* Info.plist */,
+				FAA825FA23BE3ED900FF65E0 /* BrodaleeRadioButton.swift */,
 			);
 			path = DiceRoll;
 			sourceTree = "<group>";
@@ -125,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA825FD23BE44F700FF65E0 /* Game.storyboard in Resources */,
 				FAA825F323BE321F00FF65E0 /* LaunchScreen.storyboard in Resources */,
 				FAA825F023BE321F00FF65E0 /* Assets.xcassets in Resources */,
 				FAA825EE23BE321E00FF65E0 /* Main.storyboard in Resources */,
@@ -138,8 +175,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA825FF23BE45A000FF65E0 /* GameViewController.swift in Sources */,
 				FAA825EB23BE321E00FF65E0 /* ViewController.swift in Sources */,
+				FAA825FB23BE3ED900FF65E0 /* BrodaleeRadioButton.swift in Sources */,
 				FAA825E723BE321E00FF65E0 /* AppDelegate.swift in Sources */,
+				FA6C44D223BF32B9009BFAFA /* Player.swift in Sources */,
 				FAA825E923BE321E00FF65E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

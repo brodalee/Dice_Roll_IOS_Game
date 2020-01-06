@@ -54,6 +54,9 @@
                                 <color key="backgroundColor" red="0.65720600446332167" green="1" blue="0.97980025063067122" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Voir le hall of frame"/>
+                                <connections>
+                                    <action selector="seeHof:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ief-Al-7gb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHz-E9-xEs" customClass="BrodaleeRadioButton" customModule="DiceRoll" customModuleProvider="target">
                                 <rect key="frame" x="125" y="354" width="30" height="30"/>

@@ -8,10 +8,11 @@
 
 import Foundation
 
-class Game {
+class Game: Decodable {
+    var id: Int = 0
     var turnnumber: Int = 0
     var forscore: Int = 0
-    var winner: Player?
+    var winner: String?
     var score: Int = 0
 }
 

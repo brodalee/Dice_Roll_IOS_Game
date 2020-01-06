@@ -70,4 +70,10 @@ class ViewController: UIViewController {
         middleRadioBtn.outerCircleColor = UIColor.green
         lowRadioBtn.outerCircleColor = UIColor.green
     }
+    
+    @IBAction func seeHof(_ sender: UIButton, forEvent event: UIEvent) {
+        let storyBoard = UIStoryboard(name: "Hof", bundle: nil)
+        let hofViewController = storyBoard.instantiateViewController(withIdentifier: "Hof") as! HofViewController
+        self.present(hofViewController, animated: true, completion: nil)
+    }
 }

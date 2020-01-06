@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FA6C44D223BF32B9009BFAFA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C44D123BF32B9009BFAFA /* Player.swift */; };
+		FA7425AD23C368D200DFE2FD /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7425AC23C368D200DFE2FD /* GameService.swift */; };
+		FA7425B123C37DF200DFE2FD /* GameResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7425B023C37DF200DFE2FD /* GameResponse.swift */; };
+		FA7425B323C3884600DFE2FD /* Hof.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7425B223C3884600DFE2FD /* Hof.storyboard */; };
+		FA7425B523C3886200DFE2FD /* HofViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7425B423C3886200DFE2FD /* HofViewController.swift */; };
 		FAA825E723BE321E00FF65E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA825E623BE321E00FF65E0 /* AppDelegate.swift */; };
 		FAA825E923BE321E00FF65E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA825E823BE321E00FF65E0 /* SceneDelegate.swift */; };
 		FAA825EB23BE321E00FF65E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA825EA23BE321E00FF65E0 /* ViewController.swift */; };
@@ -21,6 +25,10 @@
 
 /* Begin PBXFileReference section */
 		FA6C44D123BF32B9009BFAFA /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FA7425AC23C368D200DFE2FD /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		FA7425B023C37DF200DFE2FD /* GameResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResponse.swift; sourceTree = "<group>"; };
+		FA7425B223C3884600DFE2FD /* Hof.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hof.storyboard; sourceTree = "<group>"; };
+		FA7425B423C3886200DFE2FD /* HofViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HofViewController.swift; sourceTree = "<group>"; };
 		FAA825E323BE321E00FF65E0 /* DiceRoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA825E623BE321E00FF65E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA825E823BE321E00FF65E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +58,7 @@
 			children = (
 				FAA825FE23BE45A000FF65E0 /* GameViewController.swift */,
 				FAA825EA23BE321E00FF65E0 /* ViewController.swift */,
+				FA7425B423C3886200DFE2FD /* HofViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -60,6 +69,7 @@
 				FAA825F123BE321F00FF65E0 /* LaunchScreen.storyboard */,
 				FAA825EC23BE321E00FF65E0 /* Main.storyboard */,
 				FAA825FC23BE44F700FF65E0 /* Game.storyboard */,
+				FA7425B223C3884600DFE2FD /* Hof.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -68,8 +78,17 @@
 			isa = PBXGroup;
 			children = (
 				FA6C44D123BF32B9009BFAFA /* Player.swift */,
+				FA7425B023C37DF200DFE2FD /* GameResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FA7425AB23C3688F00DFE2FD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA7425AC23C368D200DFE2FD /* GameService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		FAA825DA23BE321E00FF65E0 = {
@@ -91,6 +110,7 @@
 		FAA825E523BE321E00FF65E0 /* DiceRoll */ = {
 			isa = PBXGroup;
 			children = (
+				FA7425AB23C3688F00DFE2FD /* Service */,
 				FA6C44D023BF32AB009BFAFA /* Model */,
 				FA6C44CF23BF3268009BFAFA /* View */,
 				FA6C44CE23BF3258009BFAFA /* Controller */,
@@ -163,6 +183,7 @@
 			files = (
 				FAA825FD23BE44F700FF65E0 /* Game.storyboard in Resources */,
 				FAA825F323BE321F00FF65E0 /* LaunchScreen.storyboard in Resources */,
+				FA7425B323C3884600DFE2FD /* Hof.storyboard in Resources */,
 				FAA825F023BE321F00FF65E0 /* Assets.xcassets in Resources */,
 				FAA825EE23BE321E00FF65E0 /* Main.storyboard in Resources */,
 			);
@@ -176,10 +197,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA825FF23BE45A000FF65E0 /* GameViewController.swift in Sources */,
+				FA7425AD23C368D200DFE2FD /* GameService.swift in Sources */,
 				FAA825EB23BE321E00FF65E0 /* ViewController.swift in Sources */,
+				FA7425B523C3886200DFE2FD /* HofViewController.swift in Sources */,
 				FAA825FB23BE3ED900FF65E0 /* BrodaleeRadioButton.swift in Sources */,
 				FAA825E723BE321E00FF65E0 /* AppDelegate.swift in Sources */,
 				FA6C44D223BF32B9009BFAFA /* Player.swift in Sources */,
+				FA7425B123C37DF200DFE2FD /* GameResponse.swift in Sources */,
 				FAA825E923BE321E00FF65E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

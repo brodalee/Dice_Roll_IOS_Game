@@ -55,7 +55,7 @@ extension HofViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath)
         let game = self.games[indexPath.row]
         cell.textLabel?.text = game.winner
-        cell.detailTextLabel?.text = "Score : " + String(game.score) + " | But : " + String(game.forscore) + " | En " + String(game.turnnumber) + " tours"
+        cell.detailTextLabel?.text = "Score : " + String(game.score) + " | But : " + String(game.forscore) + " | En " + String(game.turnnumber) + " lancés"
         cell.tag = indexPath.row
         
         let event = UITapGestureRecognizer(target: self, action: #selector(self.onCellTaped(_:)))

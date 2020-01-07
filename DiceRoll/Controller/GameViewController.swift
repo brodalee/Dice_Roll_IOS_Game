@@ -63,6 +63,11 @@ class GameViewController: ViewController {
             self.changeTurn()
         }
         
+        if firstDice == 1 || secondDice == 1 {
+            self.currentCombo = 0
+            self.changeTurn()
+        }
+        
         self.updateUI()
     }
     
@@ -96,7 +101,14 @@ class GameViewController: ViewController {
     
     private func showWinner() {
         let this = self
-        let GGAction = UIAlertAction(title: "OK", style: .default) { (action) in this.dismiss(animated: true, completion: nil)}
+        let GGAction = UIAlertAction(title: "OK", style: .default) { (action) in this.dismiss(animated: true, completion: nil)
+            let game = Game()
+            game.forscore = this.points!
+            game.score = this.currentPlayer!.currentScore
+            game.turnnumber = this.currentPlayer!.turnNumber
+            game.winner = this.currentPlayer!.name!
+            GameService.addNewGame(game: game)
+        }
         let winner = UIAlertController(title: "Partie terminé !", message: "Bravo " + self.currentPlayer!.name! + " tu as gagné la partie", preferredStyle: .alert)
         winner.addAction(GGAction)
         self.present(winner, animated: true)

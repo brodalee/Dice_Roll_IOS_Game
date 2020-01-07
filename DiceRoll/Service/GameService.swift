@@ -10,13 +10,13 @@ import Foundation
 
 class GameService {
     
-    private static let gameURL = URL(string: "http://localhost:8798/?scores=all")!
+    private static let gameURL = URL(string: "http://brodaleee.alwaysdata.net/?scores=all")!
     
     static func getGames(callback: @escaping ([Game]) -> Void ) {
         var request = URLRequest(url: gameURL)
         request.httpMethod = "GET"
         
-        let task = URLSession.shared.dataTask(with: gameURL) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error != nil { return }
             
             if let response = response as? HTTPURLResponse {
@@ -50,7 +50,7 @@ class GameService {
     }
     
     static func deleteGame(id: Int, callback: @escaping () -> Void ) {
-        let url = URL(string: "http://localhost:8798/?scores=delete&id=" + String(id))!
+        let url = URL(string: "http://brodaleee.alwaysdata.net/?scores=delete&id=" + String(id))!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
@@ -66,6 +66,28 @@ class GameService {
             }
         }
         
+        task.resume()
+    }
+    
+    static func addNewGame(game: Game) {
+        let url = URL(string: "http://brodaleee.alwaysdata.net/?scores=add")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        var body = "winner=" + String(game.winner!)
+        body += "&score=" + String(game.score)
+        body += "&turnnumber=" + String(game.turnnumber)
+        body += "&forscore=" + String(game.forscore)
+        request.httpBody = body.data(using: .utf8)
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error != nil { return }
+            
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode == 200, let data = data, let dataString = String(data: data, encoding: .utf8) {
+                }
+            }
+        }
         task.resume()
     }
 }

@@ -25,7 +25,6 @@ class GameService {
                         let jsonResponse = try JSONSerialization.jsonObject(with: dataString.data(using: .utf8)!, options: []) as? [String: Any]
                         if let realData = jsonResponse as? [String: Any] {
                             let gameResponse = GameResponse(status: realData["status"]! as! Int)
-                            print(gameResponse.status)
                             let games = realData["data"]! as? Array<AnyObject>
                             var responseGame: [Game] = []
                             for game in games! {
@@ -37,7 +36,9 @@ class GameService {
                                 newGame.id =  Int(game["id"]! as! String) as! Int
                                 responseGame.append(newGame)
                             }
-                            callback(responseGame)
+                            DispatchQueue.main.async { // Correct
+                               callback(responseGame)
+                            }
                         }
                     } catch let error {
                         print(error)

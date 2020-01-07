@@ -14,14 +14,58 @@
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="Hof" id="baR-lm-QPz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vbs-Gf-ExG">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" textLabel="28t-g6-r3Z" detailTextLabel="kMj-vW-0eR" style="IBUITableViewCellStyleSubtitle" id="ld0-SD-rQb">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ld0-SD-rQb" id="RXZ-Im-iYH">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="28t-g6-r3Z">
+                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kMj-vW-0eR">
+                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NTd-Tq-geq" id="eoY-Zs-c0g"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.89125022949999999" blue="0.61341814520000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="Hof"/>
+                        <constraints>
+                            <constraint firstItem="WAz-zK-FsT" firstAttribute="trailing" secondItem="vbs-Gf-ExG" secondAttribute="trailing" constant="20" id="2XC-iM-TsO"/>
+                            <constraint firstItem="vbs-Gf-ExG" firstAttribute="top" secondItem="WAz-zK-FsT" secondAttribute="top" id="Sab-KA-aHD"/>
+                            <constraint firstItem="vbs-Gf-ExG" firstAttribute="bottom" secondItem="WAz-zK-FsT" secondAttribute="bottom" id="Yug-Yu-KsJ"/>
+                            <constraint firstItem="vbs-Gf-ExG" firstAttribute="leading" secondItem="WAz-zK-FsT" secondAttribute="leading" constant="20" id="pnA-Bc-7uk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WAz-zK-FsT"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="vbs-Gf-ExG" id="avA-8i-yd4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIJ-yx-XX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="59" y="-294"/>
+            <point key="canvasLocation" x="57.971014492753625" y="-294.64285714285711"/>
         </scene>
     </scenes>
 </document>

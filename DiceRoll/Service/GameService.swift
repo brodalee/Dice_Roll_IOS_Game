@@ -36,7 +36,7 @@ class GameService {
                                 newGame.id =  Int(game["id"]! as! String) as! Int
                                 responseGame.append(newGame)
                             }
-                            DispatchQueue.main.async { // Correct
+                            DispatchQueue.main.async {
                                callback(responseGame)
                             }
                         }
@@ -46,6 +46,26 @@ class GameService {
                 }
             }
         }
+        task.resume()
+    }
+    
+    static func deleteGame(id: Int, callback: @escaping () -> Void ) {
+        let url = URL(string: "http://localhost:8798/?scores=delete&id=" + String(id))!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil { return }
+            
+            if let response = response as? HTTPURLResponse {
+                if response.statusCode == 200 {
+                    DispatchQueue.main.async {
+                       callback()
+                    }
+                }
+            }
+        }
+        
         task.resume()
     }
 }

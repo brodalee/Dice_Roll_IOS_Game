@@ -10,7 +10,11 @@ import Foundation
 
 class GameService {
     
-    private static let gameURL = URL(string: "http://brodaleee.alwaysdata.net/?scores=all")!
+    private struct Keys {
+        static let baseUrl = "http://brodaleee.alwaysdata.net/?scores="
+    }
+    
+    private static let gameURL = URL(string: Keys.baseUrl + "all")!
     
     static func getGames(callback: @escaping ([Game]) -> Void ) {
         var request = URLRequest(url: gameURL)
@@ -50,7 +54,7 @@ class GameService {
     }
     
     static func deleteGame(id: Int, callback: @escaping () -> Void ) {
-        let url = URL(string: "http://brodaleee.alwaysdata.net/?scores=delete&id=" + String(id))!
+        let url = URL(string: Keys.baseUrl + "delete&id=" + String(id))!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
@@ -70,7 +74,7 @@ class GameService {
     }
     
     static func addNewGame(game: Game) {
-        let url = URL(string: "http://brodaleee.alwaysdata.net/?scores=add")!
+        let url = URL(string: Keys.baseUrl + "add")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         

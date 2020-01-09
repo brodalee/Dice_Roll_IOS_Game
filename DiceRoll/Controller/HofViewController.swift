@@ -63,9 +63,5 @@ extension HofViewController: UITableViewDataSource {
         
         return cell
     }
-
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath)
-    }
     
 }
